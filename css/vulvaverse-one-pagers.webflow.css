@@ -15,8 +15,8 @@ h1 {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 3.1em;
-  line-height: 44px;
+  font-size: 3.5em;
+  line-height: 3em;
 }
 
 h2 {
@@ -24,15 +24,15 @@ h2 {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1em;
 
 }
 
 h3 {
   font-family: Authentic Untitled, sans-serif;
-  font-size: 3.5em;
-
+  font-size: 3.8em;
+  line-height:.9em;
 }
 
 p {
@@ -147,7 +147,7 @@ ul {
 
 .festival-header.announcement{
   color: var(--vulva-pink);
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
 }
 .festival-header.tagline{
   color: var(--vulva-pink);
@@ -1504,7 +1504,7 @@ ul {
   }
 
   .festival-header.par {
-    font-size: 7.2vw;
+    font-size:
   }
 
   .festival-header.par.resources {
@@ -1512,7 +1512,7 @@ ul {
   }
 
   .festival-header.tagline{
-
+    font-size: 18px;
   }
   .festival-header.date {
     margin-top: -8vw;
@@ -1636,7 +1636,7 @@ ul {
   }
 
   .button {
-    padding: 7em 7em;
+    padding: 1rem 2rem;
     font-size: 25px;
   }
 
