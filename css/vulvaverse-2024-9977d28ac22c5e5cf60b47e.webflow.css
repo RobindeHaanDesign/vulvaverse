@@ -35,7 +35,7 @@ p {
 
 a {
   color: var(--off-black);
-  cursor: none;
+  cursor: auto;
   font-family: Archivo, sans-serif;
   font-size: 1.5em;
   font-weight: 400;
@@ -51,7 +51,7 @@ ul {
 
 .body {
   background-color: var(--white);
-  cursor: none;
+  cursor: auto;
   background-image: url('../images/achtergrond_roze.jpg');
   background-position: 50% -200px;
   background-size: cover;
@@ -288,7 +288,7 @@ ul {
 .cursor {
   z-index: 1000;
   color: var(--off-black);
-  cursor: none;
+  cursor: auto;
   width: 100%;
   height: 100%;
   display: block;
