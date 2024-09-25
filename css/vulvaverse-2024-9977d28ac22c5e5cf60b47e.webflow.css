@@ -1,9 +1,28 @@
 :root {
-  --vulva-pink: #ffa7f2;
   --off-black: #1d1d1b;
+  --vulva-pink: #ffa7f2;
   --white: white;
   --vulvaviolet: #9145f4;
   --poing-pink: #ff5cd9;
+}
+
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .w-layout-blockcontainer {
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
 }
 
 body {
@@ -15,13 +34,24 @@ body {
 }
 
 h1 {
-  color: var(--vulva-pink);
+  color: var(--off-black);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Authentic Untitled, sans-serif;
   font-size: 4em;
   font-weight: 700;
   line-height: 44px;
+}
+
+h2 {
+  color: var(--off-black);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  font-family: Authentic Untitled, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 p {
@@ -35,7 +65,7 @@ p {
 
 a {
   color: var(--off-black);
-  cursor: auto;
+  cursor: none;
   font-family: Archivo, sans-serif;
   font-size: 1.5em;
   font-weight: 400;
@@ -49,9 +79,13 @@ ul {
   padding-left: 0;
 }
 
+img {
+  display: inline-block;
+}
+
 .body {
   background-color: var(--white);
-  cursor: auto;
+  cursor: none;
   background-image: url('../images/achtergrond_roze.jpg');
   background-position: 50% -200px;
   background-size: cover;
@@ -63,12 +97,15 @@ ul {
 
 .section {
   z-index: 2;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   -webkit-text-fill-color: inherit;
   cursor: auto;
+  mix-blend-mode: normal;
   background-clip: border-box;
   justify-content: center;
   align-items: stretch;
-  width: 100%;
+  width: 60%;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -83,7 +120,8 @@ ul {
   flex: 0 auto;
   justify-content: flex-start;
   align-self: flex-start;
-  width: 55.5vw;
+  align-items: stretch;
+  width: 100vw;
   padding-bottom: 0;
   display: flex;
 }
@@ -163,7 +201,7 @@ ul {
   justify-content: center;
   align-items: flex-start;
   margin-top: 0;
-  padding-top: 70px;
+  padding-top: 0;
   font-family: Authentic Untitled, sans-serif;
   font-size: 3em;
   line-height: .8em;
@@ -184,8 +222,8 @@ ul {
   justify-content: center;
   align-items: center;
   margin-top: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   position: relative;
 }
@@ -209,7 +247,7 @@ ul {
   align-items: center;
   width: 100%;
   padding-top: 1vw;
-  padding-bottom: 3vw;
+  padding-bottom: 5vw;
   display: flex;
 }
 
@@ -253,19 +291,21 @@ ul {
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: .5vw;
+  padding-bottom: 2vw;
   display: flex;
 }
 
 .lottie-animation {
   flex: 0 auto;
   width: 25vw;
-  padding-top: 0;
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
 .cursor-container {
   z-index: 1000;
   cursor: auto;
+  mix-blend-mode: difference;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100vw;
@@ -278,6 +318,7 @@ ul {
 
 .cursor-wrapper {
   z-index: 10;
+  mix-blend-mode: difference;
   width: 50px;
   height: 40px;
   margin-top: -20px;
@@ -288,7 +329,8 @@ ul {
 .cursor {
   z-index: 1000;
   color: var(--off-black);
-  cursor: auto;
+  cursor: none;
+  mix-blend-mode: difference;
   width: 100%;
   height: 100%;
   display: block;
@@ -299,21 +341,29 @@ ul {
   max-width: 90px;
 }
 
+.partner-wrapper.bar3 {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
 .star-container {
-  z-index: 1;
+  z-index: 5;
+  pointer-events: none;
+  cursor: auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
   max-width: 1500px;
   height: 100vh;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   position: fixed;
 }
 
 .star-wrapper {
   pointer-events: none;
+  cursor: auto;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -322,11 +372,12 @@ ul {
 
 .star {
   width: 3em;
+  height: 4em;
   position: static;
 }
 
 .header {
-  margin-top: 60px;
+  margin-top: 140px;
   padding-bottom: 0;
   position: relative;
 }
@@ -459,13 +510,14 @@ ul {
 
 .navbar {
   z-index: 5;
-  grid-column-gap: 80px;
-  grid-row-gap: 80px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   color: var(--off-black);
   order: 1;
   justify-content: space-between;
   align-self: center;
-  padding-top: 20px;
+  margin-top: 60px;
+  padding-top: 0;
   display: flex;
   position: fixed;
 }
@@ -687,6 +739,10 @@ ul {
   padding-top: 0;
   padding-bottom: 20px;
   display: flex;
+}
+
+.timetable {
+  margin-bottom: 40px;
 }
 
 .timetable-h2 {
@@ -1004,8 +1060,13 @@ ul {
   display: block;
 }
 
+.artist_description_container.hide {
+  padding-bottom: 0;
+}
+
 .paragraph {
   color: var(--off-black);
+  text-align: center;
   margin-bottom: 0;
   padding-bottom: 5px;
   font-family: Archivo, sans-serif;
@@ -1072,16 +1133,60 @@ ul {
 
 .artists.hide {
   color: var(--off-black);
+  padding-bottom: 15px;
   position: relative;
 }
 
-.artists.hide:hover {
+.artists.hide:hover, .artists.tramhaus:hover, .artists.zez:hover, .artists.doortje:hover, .artists.terzij:hover {
+  color: var(--white);
+}
+
+.artists.shaquille {
+  line-height: .8em;
+}
+
+.artists.shaquille:hover, .artists.larasati:hover {
+  color: var(--white);
+}
+
+.artists.pl3thora {
+  position: relative;
+}
+
+.artists.pl3thora:hover {
+  color: var(--white);
+}
+
+.artists.mm666:hover {
+  color: var(--white);
+  position: relative;
+}
+
+.artists.ong:hover, .artists.plasticperson:hover, .artists.djbeakage:hover {
+  color: var(--white);
+}
+
+.artists.panneltalk {
+  padding-bottom: 0;
+  line-height: .9em;
+}
+
+.artists.panneltalk:hover {
+  color: var(--white);
+}
+
+.artists.infotalk {
+  color: var(--off-black);
+  line-height: .8em;
+}
+
+.artists.infotalk:hover, .artists.zine:hover {
   color: var(--white);
 }
 
 .image-4 {
   width: 420em;
-  max-width: 60%;
+  max-width: 90%;
   padding-bottom: 0;
   position: relative;
 }
@@ -1094,16 +1199,35 @@ ul {
   padding-bottom: 0;
 }
 
+.artist_dropdown.vulva {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.artist_dropdown.hide {
+  padding-bottom: 0;
+}
+
+.artist_dropdown.mm666, .artist_dropdown.terzij {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .sterbalk {
   color: var(--off-black);
+  flex-flow: row;
+  flex: 1;
+  justify-content: center;
   align-self: center;
-  width: 100px;
-  padding-top: 20px;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 0;
   padding-bottom: 40px;
   font-family: Authentic Untitled, sans-serif;
   font-size: 5em;
   line-height: 0;
-  display: block;
+  display: flex;
   position: relative;
 }
 
@@ -1148,6 +1272,8 @@ ul {
 }
 
 .artist_links.dot {
+  opacity: 1;
+  pointer-events: none;
   letter-spacing: 5px;
   text-transform: none;
   word-break: normal;
@@ -1164,9 +1290,132 @@ ul {
   color: var(--off-black);
 }
 
+.image-5 {
+  height: 4rem;
+}
+
 .image-6 {
   vertical-align: baseline;
   display: inline-block;
+}
+
+.image-7 {
+  cursor: auto;
+  height: 4em;
+  margin-top: -10px;
+}
+
+._28_header {
+  padding-top: 20px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.heading-2 {
+  text-transform: none;
+}
+
+.lottie-animation-3 {
+  width: 105%;
+  display: block;
+  position: fixed;
+  top: -3%;
+}
+
+.dots {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.sideprogram {
+  font-size: 2.5em;
+}
+
+.manifesto_container {
+  flex: 0 auto;
+  order: 0;
+  align-self: flex-start;
+  margin-left: 0;
+}
+
+.resources_p {
+  color: var(--off-black);
+  text-align: center;
+  font-family: Archivo, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.heading-3 {
+  padding-bottom: 20px;
+  line-height: .8em;
+}
+
+.resource_h2 {
+  padding-bottom: 0;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+
+.contact_text {
+  color: var(--off-black);
+  font-family: Archivo, sans-serif;
+  font-size: 1.5em;
+}
+
+.image-8 {
+  object-fit: fill;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.div-block-3 {
+  box-sizing: border-box;
+  float: none;
+  aspect-ratio: auto;
+  text-align: center;
+  width: 20em;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+  position: static;
+}
+
+.timetable_png1 {
+  width: auto;
+  height: 90vh;
+  max-height: 100vh;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.resources {
+  padding-bottom: 80px;
+}
+
+.resources_contacts {
+  color: var(--off-black);
+  font-family: Archivo, sans-serif;
+  font-size: 1.5em;
+}
+
+.resources_link {
+  vertical-align: baseline;
+  cursor: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+  display: block;
+}
+
+.resources_link:hover {
+  color: var(--white);
+}
+
+.heading-4 {
+  font-size: 2.3em;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1186,7 +1435,7 @@ ul {
 
 @media screen and (min-width: 1440px) {
   .body {
-    background-position: 50% -250px;
+    background-position: 50% -300px;
     background-size: cover;
   }
 
@@ -1194,10 +1443,11 @@ ul {
     -webkit-text-fill-color: inherit;
     background-image: none;
     background-clip: border-box;
+    width: 50%;
   }
 
   .content-container {
-    width: 46vw;
+    width: 100vw;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -1231,12 +1481,14 @@ ul {
 
   .festival-header.date {
     object-fit: fill;
+    font-size: 3em;
     position: relative;
     top: 0;
   }
 
   .logo-wrapper {
     margin-top: 0;
+    padding-top: 0;
     padding-bottom: 0;
   }
 
@@ -1274,6 +1526,7 @@ ul {
 
   .lottie-animation {
     width: 324px;
+    padding-bottom: 40px;
   }
 
   .partner-wrapper {
@@ -1282,6 +1535,7 @@ ul {
 
   .star-container {
     max-width: none;
+    padding: 10px;
   }
 
   .star {
@@ -1290,8 +1544,7 @@ ul {
 
   .header {
     flex: 0 auto;
-    height: auto;
-    margin-top: 70px;
+    margin-top: 160px;
     padding-bottom: 0;
     position: relative;
   }
@@ -1323,12 +1576,17 @@ ul {
     font-size: 55px;
   }
 
+  .navbar {
+    z-index: 6;
+  }
+
   .nav-button {
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
 
   .nav-button.w--current {
     cursor: auto;
+    font-size: 1.5em;
   }
 
   .nav-button.current.w--current {
@@ -1409,10 +1667,14 @@ ul {
     max-width: 260px;
   }
 
+  .timetable {
+    padding-bottom: 80px;
+  }
+
   .text-block-2 {
     color: var(--off-black);
     padding-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 120px;
     font-family: Archivo, sans-serif;
     font-size: 1.5em;
     display: flex;
@@ -1432,8 +1694,44 @@ ul {
     cursor: default;
   }
 
+  .image-4 {
+    max-width: 90%;
+  }
+
+  .artist_dropdown.mm666 {
+    color: var(--off-black);
+  }
+
+  .artist_dropdown.mm666:hover {
+    color: var(--white);
+  }
+
+  .sterbalk {
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 0;
+  }
+
   .artist_links {
     cursor: auto;
+  }
+
+  .image-5 {
+    height: 4rem;
+  }
+
+  .lottie-animation-3 {
+    width: 103%;
+    position: fixed;
+    inset: -20% auto auto;
+  }
+
+  .manifesto_container {
+    object-fit: fill;
+  }
+
+  .heading-3 {
+    padding-bottom: 100px;
   }
 }
 
@@ -1459,18 +1757,22 @@ ul {
   }
 
   .festival-header.date {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 2.5em;
     line-height: .9em;
   }
 
   .logo-wrapper {
-    padding: 10px 80px;
+    padding: 0 80px;
   }
 
   .ornament.bottom {
     bottom: 14px;
+  }
+
+  .partner-container {
+    max-width: 70vw;
   }
 
   .lottie-animation {
@@ -1482,12 +1784,20 @@ ul {
     display: block;
   }
 
+  .partner-wrapper {
+    max-width: 70px;
+  }
+
   .star-container {
     padding: 7px;
   }
 
   .star {
     width: 3em;
+  }
+
+  .header {
+    margin-top: 140px;
   }
 
   .about {
@@ -1504,6 +1814,15 @@ ul {
 
   .line_up_poing-text {
     font-size: 4.5vw;
+  }
+
+  .navbar {
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .nav-button {
+    font-size: 1em;
   }
 
   .nav-button.w--current {
@@ -2054,6 +2373,11 @@ ul {
   .text-block-3 {
     cursor: default;
   }
+
+  .lottie-animation-3 {
+    object-fit: fill;
+    height: 100vh;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -2063,6 +2387,13 @@ ul {
 
   .section {
     overflow: hidden;
+  }
+
+  .content-container {
+    aspect-ratio: auto;
+    object-fit: scale-down;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .content-container.contact {
@@ -2097,7 +2428,7 @@ ul {
     margin-top: 0;
     padding-top: 20px;
     padding-bottom: 10px;
-    font-size: 1.8em;
+    font-size: 1.9em;
     line-height: .9em;
   }
 
@@ -2107,7 +2438,7 @@ ul {
 
   .logo-wrapper {
     margin-top: 0;
-    padding: 20px 60px;
+    padding: 0 60px;
   }
 
   .stars-wrapper {
@@ -2118,7 +2449,7 @@ ul {
 
   .socials-wrapper {
     width: 100%;
-    padding-bottom: 4vw;
+    padding-bottom: 40px;
   }
 
   .socials-image {
@@ -2129,11 +2460,14 @@ ul {
     grid-column-gap: 0vw;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 0;
+    padding-bottom: 40px;
   }
 
   .lottie-animation {
-    width: 20rem;
+    width: 10em;
+    min-width: 230px;
+    padding-top: 0;
+    padding-bottom: 0;
     position: relative;
   }
 
@@ -2141,11 +2475,16 @@ ul {
     display: none;
   }
 
+  .star-container {
+    z-index: 1;
+  }
+
   .star {
     width: 3em;
   }
 
   .header {
+    margin-top: 120px;
     padding-top: 0;
   }
 
@@ -2292,7 +2631,12 @@ ul {
   }
 
   .timetable {
+    object-fit: fill;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2.3em;
+    font-weight: 400;
     overflow: scroll;
   }
 
@@ -2325,11 +2669,19 @@ ul {
   }
 
   .navbar-mobile {
+    z-index: 15;
+    display: block;
     overflow: visible;
   }
 
   .menu-button {
     border: 0px solid var(--off-black);
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 7px 20px;
     display: flex;
   }
@@ -2349,17 +2701,17 @@ ul {
   }
 
   .mobile-menu-overlay {
-    align-self: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    z-index: 15;
     display: none;
+    overflow: visible;
   }
 
   .mobile-menu-button {
     cursor: auto;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
     display: flex;
     position: relative;
   }
@@ -2375,6 +2727,7 @@ ul {
   }
 
   .exit-button-container {
+    z-index: 10;
     display: block;
   }
 
@@ -2420,24 +2773,31 @@ ul {
 
   .text-block-2 {
     color: var(--off-black);
-    padding-bottom: 20px;
-    font-size: 1em;
+    padding-bottom: 60px;
+    font-size: 1.2em;
     line-height: 1.1;
   }
 
   .paragraph {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   .artists {
-    font-size: 1.3em;
+    padding-bottom: 0;
+    font-size: 2.3em;
+    font-weight: 400;
+    line-height: .9em;
+  }
+
+  .artists.nuh, .artists.takkak {
+    padding-bottom: 0;
+    font-size: 2em;
     line-height: 1em;
   }
 
-  .artists.nuh, .artists.takkak, .artists.ratten {
+  .artists.ratten {
     padding-bottom: 0;
-    font-size: 2em;
     line-height: 1em;
   }
 
@@ -2455,6 +2815,14 @@ ul {
     color: var(--white);
   }
 
+  .artists.zez {
+    position: relative;
+  }
+
+  .artists.terzij {
+    line-height: .9em;
+  }
+
   .image-4 {
     width: 146%;
     max-width: 100%;
@@ -2462,7 +2830,14 @@ ul {
 
   .sterbalk {
     justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
+  }
+
+  .sterbalk-copy {
+    padding-bottom: 30px;
+    font-size: 4em;
   }
 
   .artist_links {
@@ -2477,6 +2852,56 @@ ul {
     overflow-wrap: normal;
     vertical-align: baseline;
     display: block;
+  }
+
+  ._28_header {
+    padding-bottom: 40px;
+  }
+
+  .heading, .heading-2 {
+    font-size: 2.3em;
+    font-weight: 400;
+  }
+
+  .lottie-animation-3 {
+    box-sizing: border-box;
+    object-fit: cover;
+    width: 105%;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    inset: 0% 0% auto;
+    overflow: visible;
+  }
+
+  .sideprogram {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1em;
+  }
+
+  .resources_p {
+    font-size: 1em;
+  }
+
+  .heading-3, .resource_h2 {
+    padding-bottom: 40px;
+    font-size: 2.3em;
+    font-weight: 400;
+  }
+
+  .image-8 {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  .timetable_png1 {
+    height: auto;
+  }
+
+  .text-block-4 {
+    font-size: 1.2em;
   }
 }
 
