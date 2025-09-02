@@ -285,7 +285,7 @@ sup {
 
 .socials-link {
   color: var(--vulva_grey);
-  cursor: none;
+  cursor: auto;
 }
 
 .stars {
@@ -335,7 +335,7 @@ sup {
 
 .cursor-container {
   z-index: 1000;
-  cursor: none;
+  cursor: auto;
   mix-blend-mode: difference;
   justify-content: flex-start;
   align-items: flex-start;
@@ -381,7 +381,7 @@ sup {
 .star-container {
   z-index: 5;
   pointer-events: none;
-  cursor: none;
+  cursor: auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
@@ -395,7 +395,7 @@ sup {
 
 .star-wrapper {
   pointer-events: none;
-  cursor: none;
+  cursor: auto;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -504,7 +504,7 @@ sup {
   pointer-events: auto;
   color: var(--vulva-pink);
   text-overflow: clip;
-  cursor: none;
+  cursor: default;
   paint-order: stroke fill;
   padding: .25em .5em;
   font-size: 1.1em;
@@ -535,7 +535,7 @@ sup {
 .button-container {
   z-index: 5;
   grid-column-gap: 3vw;
-  cursor: none;
+  cursor: auto;
   justify-content: center;
   align-items: center;
   padding-top: 1vw;
@@ -672,6 +672,10 @@ sup {
   display: none;
 }
 
+.nav-text {
+  cursor: none;
+}
+
 .nav-text:hover {
   color: var(--vulva_grey);
 }
@@ -742,7 +746,7 @@ sup {
 .contact-text {
   color: var(--off-black);
   text-align: left;
-  cursor: none;
+  cursor: auto;
   text-decoration: none;
 }
 
@@ -812,7 +816,7 @@ sup {
 
 .contact-socials-wrapper {
   grid-column-gap: 1vw;
-  cursor: none;
+  cursor: auto;
   justify-content: space-between;
   padding-top: 0;
   padding-bottom: 20px;
@@ -1193,7 +1197,7 @@ sup {
 
 .artists.nuh {
   color: var(--off-black);
-  cursor: none;
+  cursor: default;
   font-weight: 400;
   display: block;
   position: relative;
@@ -1432,6 +1436,7 @@ sup {
 }
 
 .artist_link_container {
+  cursor: none;
   flex-flow: column;
   margin-top: 5px;
   display: block;
@@ -1452,7 +1457,7 @@ sup {
 }
 
 .image-7 {
-  cursor: none;
+  cursor: auto;
   height: 4em;
   margin-top: 0;
 }
@@ -1565,7 +1570,7 @@ sup {
 
 .resources_link {
   vertical-align: baseline;
-  cursor: none;
+  cursor: auto;
   padding-top: 10px;
   padding-bottom: 20px;
   font-size: 1.5em;
@@ -1652,11 +1657,16 @@ sup {
 
 .image-11 {
   width: 100%;
-  max-width: 30vw;
+  max-width: 40vw;
 }
 
-.image-12, .image-13, .image-14 {
-  max-width: 30vw;
+.image-12, .image-13 {
+  max-width: 40vw;
+}
+
+.image-14 {
+  cursor: none;
+  max-width: 40vw;
 }
 
 .contact_section {
@@ -1804,7 +1814,7 @@ sup {
 
   .header {
     flex: 0 auto;
-    margin-top: 7em;
+    margin-top: 4.5em;
     padding-bottom: 0;
     position: relative;
   }
@@ -1845,7 +1855,7 @@ sup {
   }
 
   .nav-button.w--current {
-    cursor: none;
+    cursor: auto;
     font-size: 1.5em;
   }
 
@@ -1951,7 +1961,7 @@ sup {
   }
 
   .paragraph {
-    cursor: none;
+    cursor: default;
   }
 
   .image-4 {
@@ -1973,7 +1983,7 @@ sup {
   }
 
   .artist_links {
-    cursor: none;
+    cursor: auto;
   }
 
   .image-5 {
@@ -2001,9 +2011,10 @@ sup {
 
 @media screen and (max-width: 991px) {
   .body {
-    cursor: none;
+    cursor: auto;
     background-position: 50% 20%;
     background-size: 120vw;
+    background-attachment: fixed;
   }
 
   .section {
@@ -2054,6 +2065,10 @@ sup {
     display: block;
   }
 
+  .cursor {
+    display: none;
+  }
+
   .partner-wrapper {
     max-width: 1000px;
   }
@@ -2067,7 +2082,7 @@ sup {
   }
 
   .header {
-    margin-top: 7em;
+    margin-top: 5em;
   }
 
   .about {
@@ -2096,7 +2111,7 @@ sup {
   }
 
   .nav-button.w--current {
-    cursor: none;
+    cursor: auto;
   }
 
   .nav-button.current.w--current, .nav-button.current.b1.w--current {
@@ -2574,14 +2589,14 @@ sup {
   }
 
   .mobile-menu-button {
-    cursor: none;
+    cursor: auto;
     padding: 2vw;
     text-decoration: none;
     display: block;
   }
 
   .mobile-menu-button.w--current {
-    cursor: none;
+    cursor: auto;
   }
 
   .text-block {
@@ -2666,7 +2681,7 @@ sup {
   }
 
   .text-block-3 {
-    cursor: none;
+    cursor: default;
   }
 
   .lottie-animation-3 {
@@ -2787,7 +2802,7 @@ sup {
   }
 
   .header {
-    margin-top: 7em;
+    margin-top: 5em;
     padding-top: 0;
   }
 
